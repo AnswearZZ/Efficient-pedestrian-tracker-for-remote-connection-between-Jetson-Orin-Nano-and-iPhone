@@ -23,7 +23,6 @@
 
 <p align="center">
   <a href="https://github.com/user-attachments/assets/fd59e495-c3e3-4e9a-a5d2-e9bc094c6d7b">
-    <img src="show/demo-screenshot.jpg" alt="Demo Video" width="640" style="border-radius:8px">
   </a>
 </p>
 
