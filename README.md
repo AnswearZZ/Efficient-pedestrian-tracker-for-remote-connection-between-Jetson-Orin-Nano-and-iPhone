@@ -22,7 +22,8 @@
 ## 🎬 Demo
 
 <p align="center">
-  <a href="https://github.com/user-attachments/assets/fd59e495-c3e3-4e9a-a5d2-e9bc094c6d7b">
+  <a >
+https://github.com/user-attachments/assets/b2fc8d6b-f345-4512-a63e-67ea7f899839
   </a>
 </p>
 
