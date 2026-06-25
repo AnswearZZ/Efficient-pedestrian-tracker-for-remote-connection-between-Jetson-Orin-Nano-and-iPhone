@@ -22,10 +22,10 @@
 ## 🎬 Demo
 
 <p align="center">
-  <a >
-https://github.com/user-attachments/assets/b2fc8d6b-f345-4512-a63e-67ea7f899839
-  </a>
-</p>
+
+
+https://github.com/user-attachments/assets/924217ed-41b0-4310-9d15-6977ca28ff25
+
 
 <p align="center">
   <a >
