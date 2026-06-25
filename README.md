@@ -171,7 +171,9 @@ cmake --build build -j$(nproc)
 
 ## ⚡ 性能
 
-> 测试平台：NVIDIA Jetson Orin Nano, YOLO11n INT8, 640×640
+> 测试平台：NVIDIA Jetson Orin Nano, YOLO11n, 640×640
+
+### C++ 流水线（本项目）
 
 | 阶段 | 预计耗时 | 说明 |
 |---|---|---|
@@ -179,7 +181,39 @@ cmake --build build -j$(nproc)
 | GPU 预处理 | ~1-2 ms | CUDA kernel 并行 |
 | TRT 推理 | ~8-15 ms | INT8 Tensor Core |
 | 后处理+显示 | ~3-8 ms | CPU NMS |
-| **端到端** | **~15-30 ms** | **约 30-60 FPS** |
+| **端到端** | **~17 ms** | **实测约 60 Hz** 🚀 |
+
+### Python 基准（单线程 PyTorch CUDA）
+
+运行 `baseline_pytorch.py` 可作为性能下限参考：
+
+| 阶段 | 预计耗时 | 说明 |
+|---|---|---|
+| 视频抓取 + CPU 预处理 | ~50-70 ms | ultralytics 内置 CPU resize/normalize |
+| PyTorch 推理 | ~20-40 ms | FP16 CUDA（无 INT8，无 TensorRT 优化） |
+| 后处理 + 显示 | ~5-10 ms | ultralytics 内置 plot |
+| **端到端** | **~100 ms** | **实测约 10 Hz** 🐢 |
+
+### 对比总结
+
+| 维度 | C++ 流水线 | Python 基准 (`baseline_pytorch.py`) |
+|---|---|---|
+| **架构** | 4 线程并行 | 单线程串行 |
+| **推理引擎** | TensorRT INT8 | PyTorch CUDA FP16 |
+| **预处理** | GPU CUDA kernel | CPU (ultralytics) |
+| **内存** | FramePool 预分配，零动态分配 | 每帧动态分配 |
+| **实测帧率** | **~60 Hz** 🚀 | **~10 Hz** 🐢 |
+| **加速比** | **6×** | 1× (基准) |
+| **部署方式** | `./build/PedestrianTracker` | `python baseline_pytorch.py` |
+| **依赖** | 仅需 TensorRT + OpenCV 运行时 | 需 ultralytics + PyTorch |
+
+```bash
+# 运行 Python 基准对比
+python baseline_pytorch.py \
+  "http://192.168.50.127:4747/video" \
+  "best.pt" \
+  0.5
+```
 
 ### 性能优化技术
 
@@ -201,11 +235,15 @@ cmake --build build -j$(nproc)
 PedestrianTracker/
 ├── CMakeLists.txt                  # CMake 构建配置
 ├── README.md                       # 本文件
+├── LICENSE                         # MIT 许可证
+├── baseline_pytorch.py             # Python 单线程基准（性能对比用）
+├── show/
+│   └── demo-screenshot.jpg         # 运行截图
 ├── src/
-│   ├── main.cpp                    # 程序入口 (76 行)
-│   ├── trt_engine.cpp              # TensorRT 引擎封装 (219 行)
-│   ├── worker_threads.cpp          # 工作线程 + YOLO 后处理 (377 行)
-│   └── cuda_preprocess.cu          # CUDA 预处理 kernel (163 行)
+│   ├── main.cpp                    # 程序入口
+│   ├── trt_engine.cpp              # TensorRT 引擎封装
+│   ├── worker_threads.cpp          # 工作线程 + YOLO 后处理
+│   └── cuda_preprocess.cu          # CUDA 预处理 kernel
 ├── include/
 │   ├── trt_engine.hpp              # TRT 引擎头文件
 │   ├── worker_threads.hpp          # 工作线程头文件 + Frame/Detection 结构体
