@@ -22,11 +22,12 @@
 ## 🎬 Demo
 
 <p align="center">
-  <a href="https://github.com/AnswearZZ/Efficient-pedestrian-tracker-for-remote-connection-between-Jetson-Orin-Nano-and-iPhone/blob/master/show/demo-video.mp4">
-    <img src="show/demo-screenshot.jpg" alt="Demo Video" width="640">
-  </a>
   <br>
-  <a href="https://github.com/AnswearZZ/Efficient-pedestrian-tracker-for-remote-connection-between-Jetson-Orin-Nano-and-iPhone/blob/master/show/demo-video.mp4">
+  
+
+https://github.com/user-attachments/assets/fd59e495-c3e3-4e9a-a5d2-e9bc094c6d7b
+
+
     ▶️ <b>点击播放演示视频</b> — Jetson Orin Nano + iPhone，实时检测 ~60 Hz
   </a>
 </p>
