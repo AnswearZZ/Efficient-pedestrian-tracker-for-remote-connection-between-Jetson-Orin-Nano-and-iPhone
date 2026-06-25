@@ -22,11 +22,14 @@
 ## 🎬 Demo
 
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/5ac066b7-c8bd-406a-9a1b-42732f46bdb" controls width="640">
-    <a href="https://github.com/user-attachments/assets/5ac066b7-c8bd-406a-9a1b-42732f46bdb">点击播放演示视频</a>
-  </video>
+  <a href="https://github.com/user-attachments/assets/5ac066b7-c8bd-406a-9a1b-42732f46bdb">
+    <img src="show/demo-screenshot.jpg" alt="Demo Video" width="640">
+  </a>
+  <br>
+  <a href="https://github.com/user-attachments/assets/5ac066b7-c8bd-406a-9a1b-42732f46bdb">
+    ▶️ <b>点击播放演示视频</b> — Jetson Orin Nano + iPhone，实时检测 ~60 Hz
+  </a>
 </p>
-<p align="center"><i>Jetson Orin Nano + iPhone HTTP 视频流，实时行人检测 ~60 Hz</i></p>
 
 ---
 
