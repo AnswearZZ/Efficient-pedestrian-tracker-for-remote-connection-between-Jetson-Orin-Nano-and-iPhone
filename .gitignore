@@ -36,8 +36,7 @@ Thumbs.db
 # Model files (large binaries)
 *.engine
 
-# Large media
-*.mp4
+# Large media (except demo files in show/)
 *.avi
 *.mov
 
