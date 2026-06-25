@@ -35,9 +35,11 @@
 ## 🎬 Demo / 演示
 
 <p align="center">
-  <a href="https://github.com/user-attachments/assets/924217ed-41b0-4310-9d15-6977ca28ff25">
-    <img src="show/demo-screenshot.jpg" alt="Demo Video" width="640">
-  </a>
+
+
+https://github.com/user-attachments/assets/ebc2af60-9e54-49de-927f-0a5fac2131bc
+
+
 </p>
 
 <p align="center">
