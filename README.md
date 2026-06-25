@@ -21,8 +21,21 @@
 
 ## 🎬 Demo
 
+<!-- 
+  ============================================================
+  视频上传步骤（GitHub Issues）：
+  1. 打开 https://github.com/AnswearZZ/你的仓库名/issues/new
+  2. 把 show/demo-video.mp4 拖入编辑框
+  3. GitHub 会自动生成类似这样的链接：
+     https://github.com/user-attachments/assets/xxxxxxxx
+  4. 将下面的 src 替换为该链接
+  ============================================================
+-->
+
 <p align="center">
-  <img src="show/demo.gif" alt="Demo Video" width="600">
+  <video src="https://github.com/user-attachments/assets/PLACEHOLDER" controls width="640">
+    <a href="https://github.com/user-attachments/assets/PLACEHOLDER">点击播放演示视频</a>
+  </video>
 </p>
 <p align="center"><i>Jetson Orin Nano + iPhone HTTP 视频流，实时行人检测 ~60 Hz</i></p>
 
