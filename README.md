@@ -22,14 +22,9 @@
 ## 🎬 Demo
 
 <p align="center">
-  <a href="https://github.com/AnswearZZ/Efficient-pedestrian-tracker-for-remote-connection-between-Jetson-Orin-Nano-and-iPhone/blob/master/show/demo-video.mp4">
-    ▶️ <b>点击观看演示视频</b>
-  </a>
+  <img src="show/demo.gif" alt="Demo Video" width="600">
 </p>
-
 <p align="center"><i>Jetson Orin Nano + iPhone HTTP 视频流，实时行人检测 ~60 Hz</i></p>
-
-> 💡 也可以直接下载 <a href="show/demo-video.mp4"><code>show/demo-video.mp4</code></a> 到本地播放
 
 ---
 
