@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/user-attachments/assets/fd59e495-c3e3-4e9a-a5d2-e9bc094c6d7b">
+  <a >
     <b>▶️ 点击播放演示视频</b>
   </a>
   <br>
