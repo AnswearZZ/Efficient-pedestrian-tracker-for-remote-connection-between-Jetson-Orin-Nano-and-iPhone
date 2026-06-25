@@ -37,7 +37,6 @@ Thumbs.db
 *.engine
 
 # Large media
-*.mp4
 *.avi
 *.mov
 *.gif
