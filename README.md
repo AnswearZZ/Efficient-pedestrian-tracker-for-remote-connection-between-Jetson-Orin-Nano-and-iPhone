@@ -7,15 +7,27 @@
   <img src="https://img.shields.io/badge/license-MIT-yellow" alt="License">
 </p>
 
-<h1 align="center">🚶 PedestrianTracker</h1>
+<h1 align="center">🚶 Efficient Pedestrian Tracker</h1>
 
-<p align="center"><b>基于 TensorRT + CUDA 的实时行人检测流水线</b><br>专为 NVIDIA Jetson Orin Nano 边缘计算平台设计</p>
+<p align="center"><b>Remote Connection Between Jetson Orin Nano and iPhone</b></p>
+<p align="center"><b>基于 TensorRT + CUDA 的实时行人检测流水线</b><br>专为 NVIDIA Jetson Orin Nano 边缘计算平台设计<br>通过 HTTP 视频流实现 iPhone 摄像头与 Jetson 的远程连接</p>
 
 <p align="center">
-  <img src="docs/pipeline-arch.svg" alt="Pipeline Architecture" width="800">
+  <img src="show/demo-screenshot.jpg" alt="Demo Screenshot" width="800">
 </p>
+<p align="center"><i>实际运行截图：行人检测 + 实时 FPS 叠加显示（Jetson Orin Nano → iPhone 摄像头）</i></p>
 
 ---
+
+## 🎬 Demo
+
+https://github.com/user-attachments/assets/PLACEHOLDER
+
+<!-- 
+  如需嵌入演示视频，建议转换为 GIF：
+  ffmpeg -i show/demo-video.mp4 -vf "fps=10,scale=800:-1" -loop 0 demo.gif
+  然后上传到 GitHub Releases 或直接用相对路径引用
+-->
 
 ## ✨ 特性
 

@@ -2,7 +2,6 @@
 build/
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -36,6 +35,11 @@ Thumbs.db
 
 # Model files (large binaries)
 *.engine
+
+# Large media
+*.mp4
+*.avi
+*.mov
 
 # Debug
 core
