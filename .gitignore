@@ -1,0 +1,42 @@
+# Build
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Compiled objects
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# CUDA
+*.ptx
+*.cubin
+*.fatbin
+*.module_id
+*.cudafe1.*
+*.ii
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files (large binaries)
+*.engine
+
+# Debug
+core
+*.core
